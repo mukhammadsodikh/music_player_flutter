@@ -110,22 +110,21 @@ class PlayerScreen extends StatelessWidget {
                     IconButton(
                       icon: Icon(
                         _songProvider.songs[controller.playIndex.value]
-                            .isFavorite
+                            .isFavorite.value
                             ? Icons.favorite
                             : Icons.favorite_border,
                         color: _songProvider
                             .songs[controller.playIndex.value]
-                            .isFavorite
+                            .isFavorite.value
                             ? Colors.red
                             : Colors.white,
                       ),
-
                       onPressed: () {
                         _songProvider.toggleFavorite(
                             _songProvider.songs[controller.playIndex.value]);
                       },
                     ),
-                  SizedBox(height: 100),
+                  SizedBox(height: 30),
                   Container(
                     height: MediaQuery.of(context).size.height / 2.5,
                     child: Column(

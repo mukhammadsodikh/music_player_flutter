@@ -23,7 +23,7 @@ class _MainHomeState extends State<MainHome> {
   final List<Widget> _screens = [
     Home(),
     LibraryScreen(),
-    FavoriteSongsScreen()
+    FavoritesScreen()
   ];
 
   @override
@@ -49,7 +49,7 @@ class _MainHomeState extends State<MainHome> {
             IconButton(
               icon: Icon(Icons.favorite),
               onPressed: () {
-                Get.to(FavoriteSongsScreen());
+                Get.to(FavoritesScreen());
               },
             ),
           ],
